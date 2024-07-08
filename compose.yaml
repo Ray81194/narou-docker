@@ -3,7 +3,7 @@ services:
     build: .
     command: ["narou", "web", "-np", "33000"]
     volumes:
-      - .:/novel:cached
+      - ./novel:/novel:cached
     tty: true
     stdin_open: true
     ports:
