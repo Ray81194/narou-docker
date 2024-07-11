@@ -32,4 +32,3 @@ RUN chmod +x /usr/local/bin/init.sh
 EXPOSE 33000-33001
 
 ENTRYPOINT ["init.sh"]
-CMD ["narou", "web", "-np", "33000"]
