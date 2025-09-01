@@ -1,10 +1,12 @@
-FROM ruby:3.3.3-alpine
+FROM ruby:3.1.7-alpine
 
 ENV NAROU_VERSION 3.9.1
 ENV AOZORAEPUB3_VERSION 1.1.1b24Q
 ENV AOZORAEPUB3_FILE AozoraEpub3-${AOZORAEPUB3_VERSION}
 
 WORKDIR /temp
+
+COPY install.sh .
 
 RUN set -x \
  # install AozoraEpub3
@@ -17,8 +19,11 @@ RUN set -x \
       build-base \
       make \
       gcc \
- && gem install narou -v ${NAROU_VERSION} --no-document \
- && apk del --purge .build-deps \
+      git \
+ # && gem install narou -v ${NAROU_VERSION} --no-document \
+ # narou install
+ && chmod +x install.sh && ./install.sh \
+ # && apk del --purge .build-deps \
  && rm -rf /temp
 
 WORKDIR /novel
