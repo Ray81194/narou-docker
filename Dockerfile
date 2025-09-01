@@ -19,9 +19,6 @@ RUN set -x \
       gcc \
  && gem install narou -v ${NAROU_VERSION} --no-document \
  && apk del --purge .build-deps \
- # setting AozoraEpub3
- && mkdir .narousetting \
- && narou init -p /aozoraepub3 -l 1.8 \
  && rm -rf /temp
 
 WORKDIR /novel
