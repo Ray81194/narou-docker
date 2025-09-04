@@ -1,0 +1,10 @@
+services:
+  app:
+    build: .
+    command: ["narou", "web", "-np", "33000"]
+    volumes:
+      - ./novel:/novel:cached
+    tty: true
+    stdin_open: true
+    ports:
+      - "33000-33001:33000-33001"
