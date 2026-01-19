@@ -7,7 +7,7 @@ Docker さえあれば一切環境構築なしで Narou.rb WEB UI を立ち上�
 
 - Alpine Linux
 - Ruby 3.1.7
-- [改造版AozoraEpub3](https://github.com/kyukyunyorituryo/AozoraEpub3) v1.1.1b30Q
+- [改造版AozoraEpub3](https://github.com/kyukyunyorituryo/AozoraEpub3) v1.1.1b31Q
 
 ※Linux 版の kindlegen は含まれません
 
